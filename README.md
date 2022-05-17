@@ -9,7 +9,7 @@ Welcome to the full stack developer interview. In this interview, there will be 
 
 > We believe that solving problems by searching online information is an important skill that you will be commonly used in your entire career life. Therefore, **you are free to google search** for any technical instructions, documentations and any other open resources during this interview. 
 
-## Task 0: Public IP Address
+## Task 0: Preparation
 
 Before you start, please check your public IP address and send it to the interviewer. This is needed to whitelist your public IP to grant access to our remote servers. Your data will be deleted immediately after the interview finishes. 
 
@@ -19,10 +19,10 @@ Before you start, please check your public IP address and send it to the intervi
 
 In this task, you will need to set up a Jupyter Notebook on a remote server, and make sure all dependencies and requirements are satisfied. 
 
-##### Server system
+#### Server system
 By default, you will be provided a Ubuntu operating system. Feel free to suggest any other OS you prefer. 
 
-##### Login
+#### Login
 The remote server’s public DNS is:
 `ec2-3-69-50-110.eu-central-1.compute.amazonaws.com`
 
@@ -31,7 +31,7 @@ The private key for ssh is provided in this repository. The file name is:
 
 You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell (if you are using Windows) or any other standalone ssh tools such as PuTTTY or WinSCP. 
 
-##### Requirements
+#### Requirements
 You need to set up an Jupyter Notebook server with secured login, so that end users are able to login in to your notebook server with a passcode through a web browser. 
 
 By default, Python is the language to be used in the notebook server. However, you could also plug-in any other language kernels, such as Java, Scala, JS, etc. 
@@ -46,7 +46,7 @@ Data are stored in the file `billionaires.csv`
 
 In order to get this file on the remote server, you need to clone this repo to the remote server. 
 
-##### Data explanation
+#### Data explanation
 The Forbes' Dataset comprises 2750 people whose net wealth equals to or exceeds one billion US Dollars.
 
 Columns Descriptions:
@@ -66,7 +66,7 @@ Columns Descriptions:
 
 > Note that only some columns are used in this task. 
 
-##### Data Sample
+#### Data Sample
 
 
 | Name                     | NetWorth | Country       | Source                 | Age | Residence               | Citizenship   | Status   | Children | Education                                                | Self_made | geometry                              |
@@ -83,7 +83,7 @@ Columns Descriptions:
 | Kim Jung-woong           | 1.2      | South Korea   | cosmetics              | 46  | Seoul, South Korea      | South Korea   | Married  | 1        | Associate in Arts/Science, Daelim University             | TRUE      | POINT (126.9782914 37.5666791)        |
 
 
-##### Your Task
+#### Your Task
 
 1. Write a program to let user type in a column name, and then sort (either in ascending or descending order) all rows based on the input value.
 2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 wealthiest people in each sector/industry. 
@@ -101,7 +101,7 @@ In this task, you'll need to present the data you just analysed. You may choose 
 
 In this task, you'll need to use a python visualisation library to display data. We recommend to use matplotlib or seaborn. 
 
-##### Your Task
+#### Your Task
 
 Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a bar chart or a line chart to display the number of billionaires (y axis) against countries (x axis). 
 
@@ -120,7 +120,7 @@ In this task, you'll need to host a web page to display data. We recommend to us
 - Flask
 - Django
 
-##### Your Task
+#### Your Task
 Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a table in your webpage. The table should contain two columns: country and count.
 
 - If you are deploying a static web page, please export your result in python to a JSON file and use javascript (or any other web page scripting language) to read the file and generate a table. 
