@@ -92,7 +92,7 @@ Columns Descriptions:
 #### Your Task
 
 1. Write a program to let user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
-2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 wealthiest people in each sector/industry. 
+2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest networth in each sector/industry. 
 3. Write a program to count the number of billionaires in each country (using either the "Country" or the "Citizenship" column). Output each country name along with the count. 
 
 > Note that this file is encoded using 'utf-8' character set. You might need to specify this encoding when your program reads the file.
