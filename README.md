@@ -27,6 +27,10 @@ The remote server’s public DNS is:
 
 `ec2-3-69-50-110.eu-central-1.compute.amazonaws.com`
 
+Username:
+
+`ubuntu`
+
 The private key for ssh is provided in this repository. The file name is:
 
 `interview.pem`
