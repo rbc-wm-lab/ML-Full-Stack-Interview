@@ -165,7 +165,7 @@ Permissions 0644 for '{key name}' are too open.
 It is required that your private key files are NOT accessible by others.
 This private key will be ignored.
 Load key "{key name}": bad permissions
-ubuntu@{DNS}: Permission denied (publickey).
+Permission denied (publickey).
 ```
 
 
