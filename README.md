@@ -154,9 +154,25 @@ Load key "{key name}": bad permissions
 ubuntu@{DNS}: Permission denied (publickey).
 ```
 
+If you are running ssh on MacOS or Linux, you might see the following error when you try to connect to the remote server:
+
+```
+$:ssh ubuntu@{DNS} -i {key name}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '{key name}' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "{key name}": bad permissions
+ubuntu@{DNS}: Permission denied (publickey).
+```
+
+
 ##### Solution
 
-[Stackoverflow Solution](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+[Stackoverflow Solution 1](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+[Stackoverflow Solution 2](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error)
 
 #### Unable to clone repo on the remote server.
 
