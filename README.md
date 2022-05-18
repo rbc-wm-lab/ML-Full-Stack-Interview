@@ -172,6 +172,7 @@ Permission denied (publickey).
 ##### Solution
 
 [Stackoverflow Solution 1](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+
 [Stackoverflow Solution 2](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error)
 
 #### Unable to clone repo on the remote server.
