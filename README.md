@@ -132,3 +132,33 @@ Use the result of the third subtask in task 2, i.e. counting the number of billi
 - If you are deploying a static web page, please export your result in python to a JSON file and use javascript (or any other web page scripting language) to read the file and generate a table. 
 
 - If you are deploying a dynamic web page using Flask or Django, please make a template of the web page with holes and fill in the holes with data in Flask or Django. 
+
+
+## Handbook
+
+Here are some issues that you may encounter:
+
+#### Permissions for '{key name}' are too open.
+
+If you are running ssh on Windows, you might see the following error when you try to connect to the remote server:
+
+```
+C:\>ssh ubuntu@{DNS} -i {key name}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions for '{key name}' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "{key name}": bad permissions
+ubuntu@{DNS}: Permission denied (publickey).
+```
+
+##### Solution
+
+[Stackoverflow Solution](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+
+#### Unable to clone repo on the remote server.
+
+If you are trying to download the dataset file but you are unable to clone this repo on the remote server, you may need to clone it to your own machine and use `scp` to transfer the file through ssh. 
+
