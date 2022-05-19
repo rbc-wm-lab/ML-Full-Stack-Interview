@@ -9,6 +9,8 @@ Welcome to the full stack developer interview. In this interview, there will be 
 
 > We believe that solving problems by searching online information is an important skill that you will be commonly used in your entire career life. Therefore, **you are free to google search** for any technical instructions, documentations and any other open resources during this interview. 
 
+We also prepared a [handbook](#handbook) which contains some commonly seen issues. 
+
 ## Task 0: Preparation
 
 Before you start, please check your public IP address and send it to the interviewer. This is needed to whitelist your public IP to grant access to our remote servers. Your data will be deleted immediately after the interview finishes. 
