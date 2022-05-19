@@ -138,7 +138,7 @@ Use the result of the third subtask in task 2, i.e. counting the number of billi
 
 Here are some issues that you may encounter:
 
-#### Permissions for '{key name}' are too open.
+### Permissions for '{key name}' are too open.
 
 If you are running ssh on Windows, you might see the following error when you try to connect to the remote server:
 
@@ -175,7 +175,13 @@ Permission denied (publickey).
 
 [Stackoverflow Solution 2](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error)
 
-#### Unable to clone repo on the remote server.
+### Unable to clone repo on the remote server.
 
 If you are trying to download the dataset file but you are unable to clone this repo on the remote server, you may need to clone it to your own machine and use `scp` to transfer the file through ssh. 
 
+
+### jupyter not found after I installed jupyter notebook
+
+There are various reasons causing this problem. The most possible one is that jupyter is not added to your bash $PATH. 
+
+Try to figure out the path to jupyter just installed and add the path to $PATH
