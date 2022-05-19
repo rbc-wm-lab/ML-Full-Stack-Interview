@@ -111,11 +111,11 @@ In this task, you'll need to use a python visualisation library to display data.
 
 #### Your Task
 
-Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a bar chart or a line chart to display the number of billionaires (y axis) against countries (x axis). 
+Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a bar chart and a line chart to display the number of billionaires (y axis) against countries (x axis). 
 
-- If you are using a bar chart, please order data based on the count in descending order. 
+- For the bar chart, please order data based on the count in descending order. 
 
-- If you are using a line chart, please order data based on country names in ascending order. 
+- For the line chart, please order data based on country names in ascending order. 
 
 ### Option 2: Webpage Deployment
 
