@@ -180,7 +180,7 @@ Permission denied (publickey).
 If you are trying to download the dataset file but you are unable to clone this repo on the remote server, you may need to clone it to your own machine and use `scp` to transfer the file through ssh. 
 
 
-### jupyter not found after I installed jupyter notebook
+### Jupyter not found after successful instalation of jupyter notebook
 
 There are various reasons causing this problem. The most possible one is that jupyter is not added to your bash $PATH. 
 
