@@ -187,3 +187,6 @@ If you are trying to download the dataset file but you are unable to clone this 
 There are various reasons causing this problem. The most possible one is that jupyter is not added to your bash $PATH. 
 
 Try to figure out the path to jupyter just installed and add the path to $PATH
+
+##### Solution
+[Stackoverflow Solution](https://stackoverflow.com/questions/35313876/after-installing-with-pip-jupyter-command-not-found)
