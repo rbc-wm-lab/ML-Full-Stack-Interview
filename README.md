@@ -42,7 +42,7 @@ You need to set up an Jupyter Notebook server with secured login, so that end us
 
 By default, Python is the language to be used in the notebook server. However, you could also plug-in any other language kernels, such as Java, Scala, JS, etc. 
 
-Apart from language it self, you should also set up a working environment for task B, C, and D. Ideally, you could use this notebook server as your IDE for future tasks. Have a look at the following tasks, and decide what packages you need.
+Apart from language it self, you should also set up a working environment for task 2, 3. Ideally, you could use this notebook server as your IDE for future tasks. Have a look at the following tasks, and decide what packages you need.
 
 
 ## Task 2: Data Analysis
