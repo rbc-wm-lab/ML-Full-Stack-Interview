@@ -41,7 +41,7 @@ The private key for ssh is provided in this repository. The file name is:
 
 `interview.pem`
 
-You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell (if you are using Windows) or any other standalone ssh tools such as PuTTTY or WinSCP. 
+You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell or WSL (if you are using Windows) or any other standalone ssh tools such as PuTTTY or WinSCP. 
 
 #### Requirements
 You need to set up an Jupyter Notebook server with secured login, so that end users are able to login in to your notebook server with a passcode through a web browser. 
