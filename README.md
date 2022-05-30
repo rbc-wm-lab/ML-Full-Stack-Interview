@@ -27,7 +27,11 @@ By default, you will be provided a Ubuntu operating system. Feel free to suggest
 #### Login
 The remote server’s public DNS is:
 
-`ec2-3-71-76-186.eu-central-1.compute.amazonaws.com`
+`ec2-18-184-185-166.eu-central-1.compute.amazonaws.com`
+
+and the public IP is:
+
+`18.184.185.166`
 
 Username:
 
