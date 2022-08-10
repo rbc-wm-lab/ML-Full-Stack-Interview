@@ -1,15 +1,16 @@
 # ML-Full-Stack-Interview
 Welcome to the ML full stack developer interview. In this interview, there will be three tasks. 
 
-- **Task 1**: Deploy and Run a Jupyter Notebook Server
-- **Task 2**: Data Analysis
-- **Task 3**: Presenting Data
-  - Option 1: Python Data Visualisation
-  - Option 2: Webpage Deployment
+* **Task 1**: Deploy and Run a Jupyter Notebook Server
+* **Task 2**: Data Analysis
+* **Task 3**: Presenting Data
+  * Option 1: Python Data Visualisation
+  * Option 2: Webpage Deployment
 
-> We believe that solving problems by searching online information is an important skill that you will be commonly used in your entire career life. Therefore, **you are free to google search** for any technical instructions, documentations and any other open resources during this interview. 
+### 💡
+> We believe that solving problems by searching for information online is an important skill you will use throughout your life as a software developer. Therefore, **you are free to Google search** for any technical documentation or any other open resources you may require during this interview. 
 
-We also prepared a [handbook](#handbook) which contains some commonly seen issues. 
+We also prepared a [handbook](#handbook) in this document which discusses some commonly seen issues. 
 
 ## Task 0: Preparation
 
@@ -100,8 +101,7 @@ Columns Descriptions:
 1. Write a program to let a user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
 2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest net worth in each sector/industry. 
 3. Write a program to count the number of billionaires in each country (using either the "Country" or the "Citizenship" column). Output each country name along with the count. 
-
-
+### 💡
 > Note that this file is encoded using 'utf-8' character set. You might need to specify this encoding when your program reads the file.
 
 
@@ -122,7 +122,7 @@ Use the result of the third subtask in task 2, i.e. counting the number of billi
 
 - For the line chart, order the data based on country names in **ascending** order. 
 
-### Option 2: Web Deployment
+### Option 2: Webpage Deployment
 
 In this task, you'll host a web page to display the data to a non-technical audience. We recommend using any of the following frameworks: 
 
