@@ -175,13 +175,10 @@ Load key "{key name}": bad permissions
 Permission denied (publickey).
 ```
 
-
-#### Solution
 As in many other situations, you are free to look at StackOverflow to obtain answers.
 
-[Stackoverflow Solution 1](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
-
-[Stackoverflow Solution 2](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error)
+* [Example Stackoverflow Solution 1](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+* [Example Stackoverflow Solution 2](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error)
 
 ### Unable to clone repo on the remote server
 
@@ -194,5 +191,4 @@ There are various reasons causing this problem. The most possible one is that ju
 
 Try to figure out the path to `jupyter` that you just installed and add it the path to $PATH
 
-##### Solution
-[Stackoverflow Solution](https://stackoverflow.com/questions/35313876/after-installing-with-pip-jupyter-command-not-found)
+* [Example Stackoverflow Solution 1](https://stackoverflow.com/questions/35313876/after-installing-with-pip-jupyter-command-not-found)
