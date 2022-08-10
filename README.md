@@ -1,5 +1,5 @@
 # ML-Full-Stack-Interview
-Welcome to the full stack developer interview. In this interview, there will be three tasks. 
+Welcome to the ML full stack developer interview. In this interview, there will be three tasks. 
 
 - **Task 1**: Deploy and Run a Jupyter Notebook Server
 - **Task 2**: Data Analysis
@@ -17,12 +17,12 @@ Before you start, please check your public IP address and send it to the intervi
 
 >You can do so by running ```curl ifconfig.me``` in your terminal or simply open [https://ifconfig.me/](https://ifconfig.me/ "ifconfig") in your web browser. 
 
-## Task 1: Deploy and Run a Jupyter Notebook Server
+## Task 1: Deploy a Remote Jupyter Notebook Server
 
 In this task, you will need to set up a Jupyter Notebook on a remote server, and make sure all dependencies and requirements are satisfied. 
 
 #### Server system
-By default, you will be provided a Ubuntu operating system. Feel free to suggest any other OS you prefer. 
+By default, you will be provided a Ubuntu operating system on the remote instance. If you prefer another flavour of Linux, let us know.
 
 #### Login
 The remote server’s public DNS is:
@@ -41,47 +41,47 @@ The private key for ssh is provided in this repository. The file name is:
 
 `interview.pem`
 
-You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell or WSL (if you are using Windows) or any other standalone ssh tools such as PuTTTY or WinSCP. 
+You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell or WSL (if you are using Windows) or any other standalone ssh tools such as PuTTY or WinSCP to move data between your local machine and the remote. 
 
 #### Requirements
 You need to set up an Jupyter Notebook server with secured login, so that end users are able to login in to your notebook server with a passcode through a web browser. 
 
 By default, Python is the language to be used in the notebook server. However, you could also plug-in any other language kernels, such as Java, Scala, JS, etc. 
 
-Apart from language it self, you should also set up a working environment for task 2, 3. Ideally, you could use this notebook server as your IDE for future tasks. Have a look at the following tasks, and decide what packages you need.
+Apart from the programming language, you should also set up a working environment for tasks 2 and 3. Ideally, you would use this notebook server as your IDE for future tasks. Have a look at the following tasks, and decide what packages you need.
 
 
 ## Task 2: Data Analysis
 
-In this task, you will need to write a program to analyse world's billionaires data. 
-Data are stored in the file `billionaires.csv`
+In this task, you will need to write a program to analyse the world's billionaires' data. 
+The data is stored in the file `billionaires.csv`
 
 In order to get this file on the remote server, you need to clone this repo to the remote server. 
 
 #### Data explanation
-The Forbes' Dataset comprises 2750 people whose net wealth equals to or exceeds one billion US Dollars.
+The Forbes Dataset comprises 2,750 people whose net worth equals or exceeds 1 billion US Dollars.
 
 Columns Descriptions:
 
-1. Name: Name of the person or family.
-2. Networth: Expressed in Billion USD.
+1. Name: Name of the person or family name
+2. Networth: Expressed in billions of USD
 3. Country
-4. Source: main source from which the wealth is originated. 
+4. Source: main source from which the wealth originated
 5. Age
-6. Residence: In the format of "City, State" or "City, Country".
+6. Residence: In the format of `City, State` or `City, Country`
 7. Citizenship
-8. Status: Marital status.
-9. Childen: Number of children they have.
-10. Education: Degree aquired and the educational institution. 
-11. Self_made: (True/False) origin of wealth.
-12. geometry
+8. Status: Marital status
+9. Children: Number of children
+10. Education: Educational institution degree was acquired from
+11. Self_made: (True/False) origin of wealth
+12. Geolocation: Location of primary residence
 
 > Note that only some columns are used in this task. 
 
 #### Data Sample
 
 
-| Name                     | NetWorth | Country       | Source                 | Age | Residence               | Citizenship   | Status   | Children | Education                                                | Self_made | geometry                              |
+| Name                     | NetWorth | Country       | Source                 | Age | Residence               | Citizenship   | Status   | Children | Education                                                | Self_made | Geolocation                              |
 | ------------------------ | -------- | ------------- | ---------------------- | --- | ----------------------- | ------------- | -------- | -------- | -------------------------------------------------------- | --------- | ------------------------------------- |
 | Liang Wengen             | 14.1     | China         | construction equipment | 64  | Changsha, China         | China         | Married  | 1        | Bachelor of Arts/Science, Central South University       | TRUE      | POINT (112.9335861 28.2302056)        |
 | Philippe Laffont         | 2.1      | United States | hedge fund             | 53  | New York, New York      | United States | Married  |          | Master of Science, Massachusetts Institute of Technology | TRUE      | POINT (-74.00601519999999 40.7127281) |
@@ -95,35 +95,36 @@ Columns Descriptions:
 | Kim Jung-woong           | 1.2      | South Korea   | cosmetics              | 46  | Seoul, South Korea      | South Korea   | Married  | 1        | Associate in Arts/Science, Daelim University             | TRUE      | POINT (126.9782914 37.5666791)        |
 
 
-#### Your Task
+#### Your Tasks
 
-1. Write a program to let user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
-2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest networth in each sector/industry. 
+1. Write a program to let a user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
+2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest net worth in each sector/industry. 
 3. Write a program to count the number of billionaires in each country (using either the "Country" or the "Citizenship" column). Output each country name along with the count. 
+
 
 > Note that this file is encoded using 'utf-8' character set. You might need to specify this encoding when your program reads the file.
 
 
-## Task 3 Presenting Data
+## Task 3: Presenting Data
 
 In this task, you'll need to present the data you just analysed. You may choose one from the two options. 
 
 
 ### Option 1: Python Data Visualisation
 
-In this task, you'll need to use a python visualisation library to display data. We recommend to use matplotlib or seaborn. 
+In this task, you'll need to use a python visualisation library to display data. We recommend to use `matplotlib` or `seaborn`. 
 
 #### Your Task
 
 Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a bar chart, a line chart and a pie chart to display the number of billionaires (y axis) against countries (x axis). 
 
-- For the bar chart, please order data based on the count in descending order. 
+- For the bar chart, order the data based on the count in **descending** order. 
 
-- For the line chart, please order data based on country names in ascending order. 
+- For the line chart, order the data based on country names in **ascending** order. 
 
-### Option 2: Webpage Deployment
+### Option 2: Web Deployment
 
-In this task, you'll need to host a web page to display data. We recommend to use any of the following architectures: 
+In this task, you'll host a web page to display the data to a non-technical audience. We recommend using any of the following frameworks: 
 
 - Apache
 - Nginx
@@ -135,16 +136,16 @@ In this task, you'll need to host a web page to display data. We recommend to us
 #### Your Task
 Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a table in your webpage. The table should contain two columns: country and count.
 
-- If you are deploying a static web page, please export your result in python to a JSON file and use javascript (or any other web page scripting language) to read the file and generate a table. 
+- If you are deploying a *static* web page, please export your result from Python to a JSON file and use JavaScript (or any other web-friendly language) to read the file and generate a table. 
 
-- If you are deploying a dynamic web page using Flask or Django, please make a template of the web page with holes and fill in the holes with data in Flask or Django. 
+- If you are deploying a *dynamic* web page using Flask or Django, please make a template of the web page with holes and fill in the holes with data in Flask or Django. 
 
 
 ## Handbook
 
-Here are some issues that you may encounter:
+Below, we list some issues that you may encounter:
 
-### Permissions for '{key name}' are too open.
+### Permissions for `{key_name}` are too open
 
 If you are running ssh on Windows, you might see the following error when you try to connect to the remote server:
 
@@ -175,22 +176,23 @@ Permission denied (publickey).
 ```
 
 
-##### Solution
+#### Solution
+As in many other situations, you are free to look at StackOverflow to obtain answers.
 
 [Stackoverflow Solution 1](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
 
 [Stackoverflow Solution 2](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error)
 
-### Unable to clone repo on the remote server.
+### Unable to clone repo on the remote server
 
-If you are trying to download the dataset file but you are unable to clone this repo on the remote server, you may need to clone it to your own machine and use `scp` to transfer the file through ssh. 
+If you are trying to download the dataset file but you are unable to clone this repo on the remote server due to ssh permission issues, you may need to clone it to your own machine and use `scp` to transfer the file through ssh. 
 
 
 ### Jupyter not found after successful installation of jupyter notebook
 
 There are various reasons causing this problem. The most possible one is that jupyter is not added to your bash $PATH. 
 
-Try to figure out the path to jupyter just installed and add the path to $PATH
+Try to figure out the path to `jupyter` that you just installed and add it the path to $PATH
 
 ##### Solution
 [Stackoverflow Solution](https://stackoverflow.com/questions/35313876/after-installing-with-pip-jupyter-command-not-found)
