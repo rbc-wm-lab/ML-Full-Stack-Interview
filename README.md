@@ -28,19 +28,23 @@ By default, you will be provided a Ubuntu operating system on the remote instanc
 #### Login
 The remote server’s public DNS is:
 
-`******`
+```sh
+ec2-3-73-106-177.eu-central-1.compute.amazonaws.com
+```
 
-and the public IP is:
+and the public IP address for the server is:
 
-`******`
+```sh
+3.73.106.177
+```
+### 💡
+> Please note that the server's public IP above is a **static** IP address, so you are free to use it to connect to the instance.
 
 Username:
 
 `ubuntu`
 
-The private key for ssh is provided in this repository. The file name is:
-
-`interview.pem`
+The private key for ssh access to the instance is provided in this repository. The file name is `interview.pem`.
 
 You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell or WSL (if you are using Windows) or any other standalone ssh tools such as PuTTY or WinSCP to move data between your local machine and the remote. 
 
