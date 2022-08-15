@@ -10,6 +10,8 @@ Welcome to the ML full stack developer interview. In this interview, there will 
 ### 💡
 > We believe that solving problems by searching for information online is an important skill you will use throughout your life as a software developer. Therefore, **you are free to Google search** for any technical documentation or any other open resources you may require during this interview. 
 
+> Feel free to use any IDE, shell or any other tools if you want. We are not testing if you can use some tool that you have never used before.
+
 We also prepared a [handbook](#handbook) in this document which discusses some commonly seen issues. 
 
 ## Task 0: Preparation
