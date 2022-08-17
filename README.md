@@ -22,40 +22,33 @@ Before you start, please check your public IP address and send it to the intervi
 
 ## Task 1: Deploy a Remote Jupyter Notebook Server
 
-In this task, you will need to set up a Jupyter Notebook on a remote server, and make sure all dependencies and requirements are satisfied. 
+In this task, you will need to set up a Jupyter Notebook on a remote server, and make sure all dependencies and requirements are satisfied. You are free to connect to the remote Jupyter server notebook via your web browser, or via an IDE like VS Code, depending on what you're more comfortable with.
 
 #### Server system
 By default, you will be provided a Ubuntu operating system on the remote instance. If you prefer another flavour of Linux, let us know.
 
 #### Login
-The remote server’s public DNS is:
+The remote server’s public IP address is one of the following:
 
-```sh
-ec2-3-73-106-177.eu-central-1.compute.amazonaws.com
-```
 
-and the public IP address for the server is:
+* `3.73.106.177`
+* `x.xx.xxx.xxx`
 
-```sh
-3.73.106.177
-```
 ### 💡
-> Please note that the server's public IP above is a **static** IP address, so you are free to use it to connect to the instance.
+> Please note that the server's public IP above is a **static** IP address, so you are free to access it via your `~/.ssh/config`if you wish.
 
-Username:
-
-`ubuntu`
+Your username for the instance will be `ubuntu` (if using Ubuntu).
 
 The private key for ssh access to the instance is provided in this repository. The file name is `interview.pem`.
 
 You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell or WSL (if you are using Windows) or any other standalone ssh tools such as PuTTY or WinSCP to move data between your local machine and the remote. 
 
 #### Requirements
-You need to set up an Jupyter Notebook server with secured login, so that end users are able to login in to your notebook server with a passcode through a web browser. 
+You may need to set up an Jupyter Notebook server with secured login (if connecting via a web browser), so that end users are able to login in to your notebook server more securely with a passcode through a web browser. 
 
 By default, Python is the language to be used in the notebook server. However, you could also plug-in any other language kernels, such as Java, Scala, JS, etc. 
 
-Apart from the programming language, you should also set up a working environment for tasks 2 and 3. Ideally, you would use this notebook server as your IDE for future tasks. Have a look at the following tasks, and decide what packages you need.
+Apart from the programming language, you should also set up a working environment for tasks 2 and 3. The notebook server you set up will be used for the subsequent tasks in this exercise. Have a look at the following tasks, and decide what additional packages you need.
 
 
 ## Task 2: Data Analysis
@@ -104,12 +97,14 @@ Columns Descriptions:
 
 #### Your Tasks
 
-1. Write a program to let a user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
-2. Write a program to group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest net worth in each sector/industry. 
-3. Write a program to count the number of billionaires in each country (using either the "Country" or the "Citizenship" column). Output each country name along with the count. 
-### 💡
-> Note that this file is encoded using 'utf-8' character set. You might need to specify this encoding when your program reads the file.
+In your Jupyter notebook, perform the following tasks. Don't forget to add markdown cells in your notebook indicating the start of each subtask below!
 
+1. Let a user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
+1. Count the number of billionaires in each country (using either the "Country" or the "Citizenship" column). Output each country name along with the count.
+1. Group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest net worth in each sector/industry. 
+### 💡 Keep in mind
+* This file is encoded using 'utf-8' character set. You may need to specify this encoding when reading in the file.
+* Code readability matters! Bonus points for formatting/linting your code (yes, even within a Jupyter notebook) in a way that makes it more readable to other developers.
 
 ## Task 3: Presenting Data
 
