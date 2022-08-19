@@ -30,8 +30,8 @@ By default, you will be provided a Ubuntu operating system on the remote instanc
 #### Login
 The remote server’s public IP address is one of the following:
 
-* `3.73.106.177`
-* `3.75.58.222`
+* `*.*.*.*`
+* `*.*.*.*`
 
 ### 💡
 > Please note that the server's public IP above is a **static** IP address, so you are free to access it via your `~/.ssh/config`if you wish.
