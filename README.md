@@ -95,7 +95,7 @@ Columns Descriptions:
 
 1. Read the columns descriptions and the sample data. Write a program to analyse the full data if needed.
 2. Create three tables: **Person**, **Country** and **City**. Note that country data appear in *Country*, *Residence* and *Citizenship* columns, and city data appear in *Residence* column.
-   Design proper database schema. Add a primary key to the **Person** table. Use incremental numbers or UUID as the primary key. Create foreign keys for proper columns. 
+   Design proper database schema. Add a primary key to all tables. You may choose among incremental numbers, UUID or original data as the primary key. Create foreign keys for proper columns. 
 3. Write a program to load the csv file and import into the tables. 
 ### 💡 Keep in mind
 * This file is encoded using 'utf-8' character set. You may need to specify this encoding when reading in the file.
