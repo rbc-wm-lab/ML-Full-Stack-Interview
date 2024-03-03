@@ -1,11 +1,10 @@
 # ML-Full-Stack-Interview
-Welcome to the ML full stack developer interview. In this interview, there will be three tasks. 
+Welcome to the full stack developer interview. In this interview, there will be three tasks. 
 
-* **Task 1**: Deploy and Run a Jupyter Notebook Server
-* **Task 2**: Data Analysis
+* **Task 1**: Install Necessary Tech Stack on a Plain Server
+* **Task 2**: Populate Database
 * **Task 3**: Presenting Data
-  * Option 1: Python Data Visualisation
-  * Option 2: Webpage Deployment
+
 
 ### 💡
 > We believe that solving problems by searching for information online is an important skill you will use throughout your life as a software developer. Therefore, **you are free to Google search** for any technical documentation or any other open resources you may require during this interview. 
@@ -20,9 +19,14 @@ Before you start, please check your public IP address and send it to the intervi
 
 >You can do so by running ```curl ifconfig.me``` in your terminal or simply open [https://ifconfig.me/](https://ifconfig.me/ "ifconfig") in your web browser. 
 
-## Task 1: Deploy a Remote Jupyter Notebook Server
+## Task 1: Install Necessary Tech Stack on a Plain Server
 
-In this task, you will need to set up a Jupyter Notebook on a remote server, and make sure all dependencies and requirements are satisfied. You are free to connect to the remote Jupyter server notebook via your web browser, or via an IDE like VS Code, depending on what you're more comfortable with.
+In this task, you will need to set up all necessary tools on a remote server, and make sure all dependencies and requirements are satisfied.
+You'll need to install the following tools:
+* Any SQL database
+* Any web server (e.g. Nginx, Apache, Node.js, Flask, etc.)
+* Any programming language to populate the database
+* Any other tools needed
 
 #### Server system
 By default, you will be provided a Ubuntu operating system on the remote instance. If you prefer another flavour of Linux, let us know.
@@ -42,17 +46,10 @@ The private key for ssh access to the instance is provided in this repository. T
 
 You'll need to use `ssh` to connect to the remote server. You can use terminal (if you are using MacOS or Linux), powershell or WSL (if you are using Windows) or any other standalone ssh tools such as PuTTY or WinSCP to move data between your local machine and the remote. 
 
-#### Requirements
-You may need to set up an Jupyter Notebook server with secured login (if connecting via a web browser), so that end users are able to login in to your notebook server more securely with a passcode through a web browser. 
 
-By default, Python is the language to be used in the notebook server. However, you could also plug-in any other language kernels, such as Java, Scala, JS, etc. 
+## Task 2: Populate Database
 
-Apart from the programming language, you should also set up a working environment for tasks 2 and 3. The notebook server you set up will be used for the subsequent tasks in this exercise. Have a look at the following tasks, and decide what additional packages you need.
-
-
-## Task 2: Data Analysis
-
-In this task, you will need to write a program to analyse the world's billionaires' data. 
+In this task, you will need to write a program to import the world's billionaires' data into the database you set up in Task 1. 
 The data is stored in the file `billionaires.csv`
 
 In order to get this file on the remote server, you need to clone this repo to the remote server. 
@@ -96,49 +93,24 @@ Columns Descriptions:
 
 #### Your Tasks
 
-In your Jupyter notebook, perform the following tasks. Don't forget to add markdown cells in your notebook indicating the start of each subtask below!
-
-1. Let a user type in a column name, and then sort (either in ascending or descending order) the entire table based on the input value.
-1. Count the number of billionaires in each country (using either the "Country" or the "Citizenship" column). Output each country name along with the count.
-1. Group all rows based on sector/industry (the "Source" column). Then generate a new table which contains only the top 3 people with the highest net worth in each sector/industry. 
+1. Read the columns descriptions and the sample data. Write a program to analyse the full data if needed.
+2. Create three tables: **Person**, **Country** and **City**. Note that country data appear in *Country*, *Residence* and *Citizenship* columns, and city data appear in *Residence* column.
+   Design proper database schema. Add a primary key to the **Person** table. Use incremental numbers or UUID as the primary key. Create foreign keys for proper columns. 
+3. Write a program to load the csv file and import into the tables. 
 ### 💡 Keep in mind
 * This file is encoded using 'utf-8' character set. You may need to specify this encoding when reading in the file.
-* Code readability matters! Bonus points for formatting/linting your code (yes, even within a Jupyter notebook) in a way that makes it more readable to other developers.
+* Code readability matters! Bonus points for formatting/linting your code in a way that makes it more readable to other developers.
 
 ## Task 3: Presenting Data
 
-In this task, you'll need to present the data you just analysed. You may choose one from the two options. 
-
-
-### Option 1: Python Data Visualisation
-
-In this task, you'll need to use a python visualisation library to display data. We recommend to use `matplotlib` or `seaborn`. 
-
-#### Your Task
-
-Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a bar chart, a line chart and a pie chart to display the number of billionaires (y axis) against countries (x axis). 
-
-- For the bar chart, order the data based on the count in **descending** order. 
-
-- For the line chart, order the data based on country names in **ascending** order. 
-
-### Option 2: Webpage Deployment
-
 In this task, you'll host a web page to display the data to a non-technical audience. We recommend using any of the following frameworks: 
 
-- Apache
-- Nginx
-- Tomcat
-- Node.js
-- Flask
-- Django
-
 #### Your Task
-Use the result of the third subtask in task 2, i.e. counting the number of billionaires in each country. Generate a table in your webpage. The table should contain two columns: country and count.
+Counting the number of billionaires in each country, and the average networth of billionaires in each country. Generate a table in your webpage. The table should contain three columns: country, count and avg networth.
 
 - If you are deploying a *static* web page, please export your result from Python to a JSON file and use JavaScript (or any other web-friendly language) to read the file and generate a table. 
 
-- If you are deploying a *dynamic* web page using Flask or Django, please make a template of the web page with holes and fill in the holes with data in Flask or Django. 
+- If you are deploying a *dynamic* web page using PHP, Flask, Django, etc., please make a template of the web page with holes and fill in the holes with data.
 
 
 ## Handbook
@@ -183,12 +155,3 @@ As in many other situations, you are free to look at StackOverflow to obtain ans
 ### Unable to clone repo on the remote server
 
 If you are trying to download the dataset file but you are unable to clone this repo on the remote server due to ssh permission issues, you may need to clone it to your own machine and use `scp` to transfer the file through ssh. 
-
-
-### Jupyter not found after successful installation of jupyter notebook
-
-There are various reasons causing this problem. The most possible one is that jupyter is not added to your bash $PATH. 
-
-Try to figure out the path to `jupyter` that you just installed and add it the path to $PATH
-
-* [Example Stackoverflow Solution 1](https://stackoverflow.com/questions/35313876/after-installing-with-pip-jupyter-command-not-found)
